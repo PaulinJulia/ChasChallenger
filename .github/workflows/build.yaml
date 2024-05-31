@@ -47,7 +47,7 @@ jobs:
       - name: Trigger Deploy Updated Docker Image (Frontend)
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DOCKER_TOKEN }}
           repository: ${{ github.repository }}
           event-type: workflow_dispatch
           client-payload: '{"trigger_frontend_deploy":"true"}'

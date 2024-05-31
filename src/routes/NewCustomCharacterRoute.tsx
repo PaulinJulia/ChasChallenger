@@ -9,7 +9,7 @@ import { AbilityScoreDropdown } from "../components/AbilityScoreDropdown";
 import Profession, { ProfessionsArray } from "../types/Profession";
 import Species, { SpeciesArray } from "../types/Species";
 import axios from "axios";
-import Footer from "../components/Footer";
+/* import Footer from "../components/Footer"; */
 
 interface AvatarOption {
   expiryTime: string;

@@ -4,7 +4,7 @@ import Profession from "../types/Profession";
 import Species from "../types/Species";
 import style from "./NewPremadeCharacterRoute.module.css";
 import { Link, NavigateFunction, useNavigate } from "react-router-dom";
-import Footer from "../components/Footer";
+/* import Footer from "../components/Footer"; */
 
 const premades: Character[] = [
   {

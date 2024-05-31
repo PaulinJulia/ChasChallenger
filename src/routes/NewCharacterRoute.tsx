@@ -1,6 +1,6 @@
 import style from "./NewCharacterRoute.module.css";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer"
+/* import Footer from "../components/Footer" */
 
 export const NewCharacterRoute = () => {
   return (

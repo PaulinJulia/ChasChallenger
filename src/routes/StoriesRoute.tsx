@@ -1,6 +1,6 @@
 import { Stories } from "../components/Stories";
 import style from "./StoriesRoute.module.css";
-import Footer from "../components/Footer"
+/* import Footer from "../components/Footer" */
 
 export const StoriesRoute = () => {
   return (

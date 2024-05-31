@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./AboutRoute.module.css";
-import Footer from "../components/Footer"
+/* import Footer from "../components/Footer" */
 
 export const AboutRoute = () => {
   return (

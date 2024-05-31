@@ -164,7 +164,7 @@ export const NewPremadeCharacterRoute = () => {
           Back
         </Link>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

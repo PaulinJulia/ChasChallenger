@@ -9,7 +9,7 @@ export const StoriesRoute = () => {
       <h2 className={style.heading}>STAYIN ALIVE</h2>
       <Stories />
     </main>
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 };

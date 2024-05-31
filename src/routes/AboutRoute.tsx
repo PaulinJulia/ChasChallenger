@@ -21,7 +21,7 @@ Den gemensamma kreativiteten i ert D&D-spel bygger berättelser som ni kommer at
       </section>
       <Link to="/">Go back</Link>
     </main>
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 };

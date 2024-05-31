@@ -10,7 +10,7 @@ export const LoginRoute = () => {
       <LoginForm />
       
     </main>
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 };

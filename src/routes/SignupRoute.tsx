@@ -8,7 +8,7 @@ export const SignupRoute = () => {
       <SignUpForm />
       
     </main>
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 };

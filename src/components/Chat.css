@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 83.2vh;
+  height: 120vh;
+  padding-bottom: 60px;
 }
 
 .chat-box {
@@ -54,35 +55,38 @@
   display: flex;
   align-items: center;
   position: fixed;
-  bottom: 1.2rem;
+  bottom: 2rem;
   background-color: white;
   border-radius: 30px;
+  /* width: 100%; */
+  padding: 0 10px;
 }
+
 
 .chat-input :focus {
   outline: none;
 }
 
-.knapp {
-  position: relative;
-  
 
-  /* filter: invert(1); */
-}
 
 .sendButton{
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
   font-size: 25px;
-  border-radius: 50px;
+  border-radius: 10px;
+  border: none;
 }
 
 
 
 .icon {
-  background-color: white;
-  size: 60px;
-  fill: var(--black-color);
-  border-radius: 90px;
+  background-color: rgb(255, 255, 255);
+  size: 20px;
+  fill: black;
+  width: 30px;
+  
+  
 }
 
 /* .chat-input input {
@@ -124,7 +128,9 @@
   flex-direction: column;
   justify-content: center;
   color: black;
-  height: 4vh;
+  height: 5vh;
+  border: none;
+  padding: 10px 0;
 }
 
 .loader {
@@ -166,4 +172,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (min-width: 400px){
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 80vh;
+    padding-bottom: 60px;
+    border: 1px double white;
+  }
+
 }

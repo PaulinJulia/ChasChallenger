@@ -3,9 +3,9 @@
 }
 
 .footer{
-    position: fixed;      /* Fix position to the bottom of the screen */
+    /* position: fixed;   */    /* Fix position to the bottom of the screen */
     bottom: 0;            /* Align to the bottom */
     width: 100%;          /* Span across the entire width of the viewport */
-    z-index: 1000;     
+    z-index: 10;     
 
 }

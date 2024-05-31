@@ -40,7 +40,7 @@ export const NewCharacterRoute = () => {
         </li>
       </ul>
     </main>
-    <Footer />
+    {/* <Footer /> */}
   </>
   );
 };

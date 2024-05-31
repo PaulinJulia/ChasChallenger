@@ -118,7 +118,7 @@ export const CharactersRoute = () => {
       <Link className={style.link} relative="path" to="new">
         New
       </Link>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 };

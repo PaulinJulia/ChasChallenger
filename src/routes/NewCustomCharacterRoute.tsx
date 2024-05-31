@@ -558,7 +558,7 @@ export const NewCustomCharacterRoute = () => {
           Back
         </Link>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

@@ -33,7 +33,7 @@ export const HomeRoute = () => {
       </article> */}
      
     </main>
-    <Footer />
+    {/* <Footer /> */}
     
     </>
   );

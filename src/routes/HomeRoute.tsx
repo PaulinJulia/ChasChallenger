@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./HomeRoute.module.css"
 /* import back from "../Images/back.png" */
-import Footer from "../components/Footer"
+/* import Footer from "../components/Footer" */
 
 export const HomeRoute = () => {
   return (

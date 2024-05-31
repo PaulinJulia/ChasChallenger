@@ -1,5 +1,5 @@
 import SignUpForm from "../components/SignUpForm";
-import Footer from "../components/Footer"
+/* import Footer from "../components/Footer" */
 
 export const SignupRoute = () => {
   return (

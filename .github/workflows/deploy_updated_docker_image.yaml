@@ -22,6 +22,6 @@ jobs:
           script: |
             sudo docker stop frontend-container || true
             sudo docker rm frontend-container || true
-            sudo docker rmi ghcr.io/robinruden/ChasChallenger/app:latest || true
-            sudo docker pull ghcr.io/robinruden/ChasChallenger/app:latest
-            sudo docker run -d --name frontend-container -p 8080:80 --restart always -v /var/docker/frontend/logs:/var/log/app -v /var/docker/frontend/cache:/var/cache/app ghcr.io/robinruden/ChasChallenger/app:latest
+            sudo docker rmi ghcr.io/robinruden/chaschallenger/app:latest || true
+            sudo docker pull ghcr.io/robinruden/chaschallenger/app:latest
+            sudo docker run -d --name frontend-container -p 8080:80 --restart always -v /var/docker/frontend/logs:/var/log/app -v /var/docker/frontend/cache:/var/cache/app ghcr.io/robinruden/chaschallenger/app:latest

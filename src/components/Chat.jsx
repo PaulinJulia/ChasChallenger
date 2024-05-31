@@ -151,7 +151,7 @@ export function Chat() {
               value={query}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
-              placeholder="skriv nåt för fan..."
+              placeholder=""
             />
             <button
               onClick={handleSend}

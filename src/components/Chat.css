@@ -130,7 +130,7 @@
   color: black;
   height: 5vh;
   border: none;
-  font-size: 16px;
+  font-size: 20px !important;
   padding: 10px 0;
 }
 

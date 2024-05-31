@@ -55,7 +55,7 @@ function LoginForm() {
       if (response.status === 200) {
         console.log("Login succeeded!");
       }
-      alert("Välkommen in i värmen!");
+      /* alert("Välkommen in i värmen!"); */
       navigate("/characters");
 
       if (response.headers["set-cookie"]) {

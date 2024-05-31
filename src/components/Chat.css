@@ -183,7 +183,7 @@
     width: 40%;
     height: 80vh;
     padding-bottom: 60px;
-    border: 1px double white;
+    border: 0.1rem solid rgb(255, 0, 208);
   }
 
 }

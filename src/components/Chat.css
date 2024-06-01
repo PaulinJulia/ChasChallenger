@@ -49,6 +49,8 @@
   border-top-right-radius: 0;
   margin-left: auto;
   width: 70%;
+  max-height: 150px; 
+  overflow-y: auto;
 }
 
 .chat-input {

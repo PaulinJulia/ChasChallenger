@@ -21,6 +21,9 @@ export function Chat() {
   const [buttonPopup, setButtonPopup] = useState(false);
   const { id } = useSelector((state) => state.character);
 
+ 
+
+
   const storedData = localStorage.getItem("activeStory");
   let charactersListFromLocal = [];
 
@@ -111,7 +114,8 @@ export function Chat() {
       endOfMessagesRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [history]);
-  /* const style = { background: '', fontSize: "1.4em" } */
+
+
 
   return (
     <>

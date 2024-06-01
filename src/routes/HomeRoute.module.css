@@ -1,56 +1,56 @@
 .containerheader {
-display: flex;
-flex-direction: column;
-justify-content:space-around
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .titleone {
-display: flex;
-justify-content: center;
-font-family: "Cinzel Decorative";
-font-size: 4rem;
-padding: 0;
-margin-top: 8rem;
-text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
-font-weight: bold;
-margin-top: 4vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Cinzel Decorative";
+  font-size: 4rem;
+  padding: 0;
+  margin-top: 8rem;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  margin-top: 4vh;
 }
 
 .titletwo {
-display: flex;
-justify-content: center;
-font-family: "Cinzel Decorative";
-font-size: 4rem;
-line-height: 80%;
-text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
-font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-family: "Cinzel Decorative";
+  font-size: 4rem;
+  line-height: 80%;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
 }
 
 .introtext {
-display: flex;
-justify-content: center;
-text-align: center;
-padding: 1rem 0rem 1rem 0rem;
-width: px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  width: px;
+  margin-top: 1rem;
 }
 
 .playbutton {
-padding: 0.5rem 4rem;
-border: 1px solid rgba(165, 193, 119, 1);
-border-radius: 2rem;
-/* background: radial-gradient(var(--button-yellow-color), var(--button-green-color)); */
-background: radial-gradient( rgba(242, 242, 176, 1), rgba(165, 183, 53, 1));
-font-size: 1.25rem;
-font-weight: bold;
-color: rgba(28, 25, 25, 1);
-margin-bottom: 4rem;
-margin-top: 6vh;
-cursor: pointer;
+  padding: 0.5rem 4rem;
+  border: 1px solid rgba(165, 193, 119, 1);
+  border-radius: 2rem;
+  /* background: radial-gradient(var(--button-yellow-color), var(--button-green-color)); */
+  background: radial-gradient(rgba(242, 242, 176, 1), rgba(165, 183, 53, 1));
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgba(28, 25, 25, 1);
+  margin-bottom: 4rem;
+  margin-top: 4vh;
+  cursor: pointer;
 }
 
-.playbutton:hover{
-    background: radial-gradient( rgba(255, 255, 224, 1), rgba(192, 220, 70, 1));
-    
+.playbutton:hover {
+  background: radial-gradient(rgba(255, 255, 224, 1), rgba(192, 220, 70, 1));
 }
 /* button:hover{
     background-color: rgb(112, 79, 35);

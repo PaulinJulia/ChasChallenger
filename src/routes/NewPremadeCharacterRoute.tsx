@@ -99,7 +99,7 @@ export const NewPremadeCharacterRoute = () => {
                   loading="lazy"
                   onError={(error) =>
                     ((error.target as HTMLImageElement).src =
-                      "/src/assets/images/defaultCharacterIcon.png")
+                      "/images/defaultCharacterIcon.png")
                   }
                 />
                 <div className={style.traits}>

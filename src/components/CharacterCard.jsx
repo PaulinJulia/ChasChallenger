@@ -68,7 +68,7 @@ function CharacterCard({ character, onDelete, onFavorite, onSelect }) {
 
       <div className={style["image-stats-wrapper"]}>
         <img
-          src={character.imageURL}
+          src={character.imageURL || "/images/defaultCharacterIcon.png"}
           alt="character"
           className={style["character-image"]}
         />

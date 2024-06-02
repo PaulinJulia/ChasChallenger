@@ -1,14 +1,32 @@
+.container{
+  display: flex;
+  flex-direction: column;
+ /*  justify-content: center; */
+  align-items: center;
+  justify-content: space-evenly;
+  
+  
+}
+
 .form {
-  border: 1px solid var(--text-color);
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid white;
+  border-radius: 40px;
+  border-color: solid rgb(254, 255, 255);
   margin: 3rem 1rem 3rem 1rem;
   background-color: rgba(29, 30, 32, 1);
   padding: 1rem;
+  width: 45vh;
+  height: 50vh;
 }
 .title {
   text-align: center;
   font-size: 1.75rem;
-  margin-bottom: 1rem;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 .label-name {
   text-align: left;
@@ -18,50 +36,49 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 3rem;
+  width: 70%  
 }
 .input-form {
-  border: 1px solid var(--text-color);
+  border: 1px solid rgba(245, 251, 241, 1);
   border-radius: 4px;
-  background-color: rgba(29, 30, 32, 1);
-  padding: 0.5rem;
+  background-color: rgba(255, 252, 197);
+  padding: 0.7rem;
+  width: 30vh;
+  border-radius: 10px;
+  color: black;
+  
 }
-.agree-checkbox-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 1rem;
-  padding: 1rem;
-}
+
 .signup-button-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .signup-button {
-  padding: 0.5rem 2rem;
-  border: 3px solid var(--border-color);
+  padding: 0.1rem 1.4rem;
+  border: 1px solid rgba(165, 193, 119, 1);
   border-radius: 2rem;
-  background: radial-gradient(
-    var(--button-yellow-color),
-    var(--button-green-color)
-  );
-  font-size: 1.25rem;
-  color: var(--black-color);
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin: 1.5rem 1rem 1.5rem 0rem;
+  background: radial-gradient( rgba(242, 242, 176, 1), rgba(165, 183, 53, 1));
+  font-size: 1rem;
+  color: rgba(28, 25, 25, 1);
+ 
+  margin-bottom: 3vh;
+  margin-top:13vh;
+  
+  height: 5vh;
+  text-align: center;
+  width: 21vh;
 }
-.input-checkbox {
-  width: 1rem;
-  height: 1rem;
-  cursor: pointer;
+
+.signup-button:hover{
+  background: radial-gradient( rgba(255, 255, 224, 1), rgba(192, 220, 70, 1));
+  cursor: pointer; 
 }
-.agree-text {
-  padding-left: 0.5rem;
-}
+
 .goback {
   padding: 1rem;
   margin: 3rem 1rem;
+  
 }
 .goback {
   display: flex;
@@ -69,17 +86,138 @@
   padding: 1rem;
   margin: 3rem 1rem;
 }
+
+.goback{
+  cursor: pointer;
+}
 .back-icon {
   width: 2.5rem;
   height: 2.5rem;
+  
+  cursor: pointer;
 }
 .goback-link {
   display: flex;
+  cursor: pointer;
+  
 }
+
 .goback-button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 .goback-button:hover {
   background: none;
+}
+
+
+
+
+/* DEKSTOP */
+@media (min-width: 375px) {
+  .title {
+    margin-top: 2vh;
+    text-align: center;
+    font-size: 1.75rem;
+    
+  
+  }
+  .inputs {
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%
+
+  
+    
+    
+  }
+
+  .signup-button {
+    padding: 0.1rem 1.4rem;
+    border: 1px solid rgba(165, 193, 119, 1);
+    border-radius: 2rem;
+    background: radial-gradient( rgba(242, 242, 176, 1), rgba(165, 183, 53, 1));
+  
+    font-size: 1rem;
+    color: rgba(28, 25, 25, 1);
+    
+    margin-bottom: 3vh;
+    margin-top:12vh;
+    
+    height: 5vh;
+    text-align: center;
+    width: 21vh;
+  }
+
+  .goback {
+   
+    padding: 1rem;
+    margin: 6rem 1rem;
+    
+  }
+
+}
+
+/* MOBILVY */
+@media (max-width: 375px) {
+ 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid white;
+  border-radius: 40px;
+  border-color: solid rgb(254, 255, 255);
+  margin: 3rem 1rem 3rem 1rem;
+  background-color: rgba(29, 30, 32, 1);
+  padding: 1rem;
+  width: 40vh;
+  height: 50vh;
+  
+  }
+
+  .label-name {
+    margin-right: 1vh;
+    width: 190px;
+  }
+
+  .title {
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 1.75rem;
+    
+    
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1vh;
+   
+}
+
+
+  .signup-button {
+    padding: 0.1rem 1.4rem;
+    border: 1px solid rgba(165, 193, 119, 1);
+    border-radius: 2rem;
+    background: radial-gradient( rgba(242, 242, 176, 1), rgba(165, 183, 53, 1));
+  
+    font-size: 1rem;
+    color: rgba(28, 25, 25, 1);
+  
+    margin-bottom: 3vh;
+    margin-top:16vh;
+    
+    height: 5vh;
+    text-align: center;
+    width: 21vh;
+  }
+
 }

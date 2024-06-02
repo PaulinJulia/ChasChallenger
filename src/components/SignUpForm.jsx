@@ -37,16 +37,17 @@ function SignUpForm() {
   };
 
   return (
-    <div>
+    <div className={style.container}>
       <form className={style.form} onSubmit={handleSubmit}>
-        <div className={style.title}>Sign Up</div>
+        <h2><div className={style.title}>Bli medlem</div></h2>
         <div className={style.inputs}>
           <label className={style["label-name"]} htmlFor="email">
-            E-mail
+            E-post*
           </label>
           <input
             className={style["input-form"]}
             type="email"
+            placeholder="Mejladress"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -54,11 +55,12 @@ function SignUpForm() {
         </div>
         <div className={style.inputs}>
           <label className={style["label-name"]} htmlFor="password">
-            Set up a password
+            Ange ett lösenord*
           </label>
           <input
             className={style["input-form"]}
             type="password"
+            placeholder="Lösenord"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -66,17 +68,18 @@ function SignUpForm() {
         </div>
         <div className={style.inputs}>
           <label className={style["label-name"]} htmlFor="password">
-            Confirm your password
+           Bekräfta lösenord*
           </label>
           <input
             className={style["input-form"]}
             type="password"
+            placeholder="Lösenord"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
           />
         </div>
-        <div className={style["agree-checkbox-wrapper"]}>
+      {/*   <div className={style["agree-checkbox-wrapper"]}>
           <input
             className={style["input-checkbox"]}
             title="Agree terms"
@@ -87,14 +90,14 @@ function SignUpForm() {
           <label className={style["agree-text"]} htmlFor="checkbox">
             I have read and agree to the terms of use.
           </label>
-        </div>
+        </div> */}
         <div className={style["signup-button-wrapper"]}>
           <button
             className={style["signup-button"]}
             title="Sign Up"
             type="submit"
           >
-            Sign Up
+            Bli medlem
           </button>
         </div>
       </form>
@@ -102,7 +105,7 @@ function SignUpForm() {
         <Link className={style["goback-link"]} title="Go Back" to="/login">
           <FaArrowLeftLong className={style["back-icon"]} />
           <button className={style["goback-button"]} title="Go Back">
-            Go back
+            Bakåt
           </button>
         </Link>
       </div>

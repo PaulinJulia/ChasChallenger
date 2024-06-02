@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
   border: 1px solid white;
   border-radius: 40px;
   border-color: solid rgb(254, 255, 255);
@@ -18,19 +18,17 @@
   width: 45vh;
   height: 50vh;
   
-  
-  /* align-items: center; */
-  /* justify-content: center; */
+
   
   
 }
 .title {
-  /* margin-top: 1vh; */
+  
   text-align: center;
   font-size: 1.75rem;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  /* border:solid rgb(0, 255, 98); */
+ 
  
   
   
@@ -46,10 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
- /*  align-items: center; */
-  /* align-items: flex-start ; */
 
-  /* border:solid rgb(0, 255, 98); */
   
   padding: 10px;
   margin-bottom: 5vh;
@@ -65,7 +60,7 @@
   width: 30vh;
   border-radius: 10px;
   color: black;
-  /* margin-top: 4px; */
+  
   
 }
 
@@ -83,11 +78,10 @@
   border: 1px solid rgba(165, 193, 119, 1);
   border-radius: 2rem;
   background: radial-gradient( rgba(242, 242, 176, 1), rgba(165, 183, 53, 1));
- /*  background-color:rgba(242, 242, 176, 1);
-  background-color: rgba(165, 183, 53, 1); */
+
   font-size: 1rem;
   color: rgba(28, 25, 25, 1);
-  /* margin-top: 3vh; */
+ 
   margin-bottom: 3vh;
   
   height: 5vh;
@@ -109,7 +103,7 @@
   padding: 1rem;
   text-decoration: underline;
   margin-bottom: 1rem;
-  /* margin-top:6vh; */
+ 
   
 }
 
@@ -119,8 +113,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
- /*  border:solid rgb(0, 255, 98); */
- /*  margin-top: 10vh; */
+ 
 }
 .signup-button {
   background: rgba(29, 30, 32, 1);
@@ -153,38 +146,32 @@
 .goback-button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 .goback-button:hover {
   background: none;
 }
 
-/* @media (min-width: 400px) {
+
+
+/* DEKSTOP */
+@media (min-width: 375px){
   .form {
-    border: 1px solid var(--text-color);
-    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid white;
+    border-radius: 40px;
+    border-color: solid rgb(254, 255, 255);
     margin: 3rem 1rem 3rem 1rem;
     background-color: rgba(29, 30, 32, 1);
     padding: 1rem;
-    width: 36vh;
-    height: 50vh;
-  } 
-
-  .login-button {
-    padding: 0.5rem 1rem;
-    border: 3px solid var(--border-color);
-    border-radius: 2rem;
-    background: radial-gradient(
-      var(--button-yellow-color),
-      var(--button-green-color)
-    );
-    font-size: 1.3rem;
-    color: var(--black-color);
-    margin-top: 1rem;
-    margin-right: 1rem;
-    margin: 1.5rem 1rem 1.5rem 0rem;
-    height: 6vh;
-    width: 14vh;
+    width: 38vh;
+    height: 45vh;
+    
+  
+    
     
   }
-
-} */
+}

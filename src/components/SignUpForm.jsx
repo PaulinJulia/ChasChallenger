@@ -19,9 +19,6 @@ function SignUpForm() {
     }
     try {
       const response = await axios.post(
-       /*  "http://localhost:5106/register", */
-        /* `https://localhost:7110/register`, */
-       /*  `52.149.227.5:8081/register`, */
         /* `https://chasfantasy.azurewebsites.net/register`, */
         `/api/register`,
         

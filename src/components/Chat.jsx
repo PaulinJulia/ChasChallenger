@@ -67,8 +67,8 @@ export function Chat() {
     console.log(message);
     try {
       const result = await axios.post(
-        `https://chasfantasy.azurewebsites.net/api/chat/message`,
-        /* `/api/chat/message`, */
+        /* `https://chasfantasy.azurewebsites.net/api/chat/message`, */
+        `/api/chat/message`,
 
         message
       );

@@ -102,16 +102,31 @@ nav .menu span {
     cursor: pointer;
 }
 
-.logout:hover{
-    background: white;
-}
+/* .logout:hover{
+    background-color: #A5C177; 
+    color: #191919; 
+    border: 2px solid #A5C177; 
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+} */
 
 .logout{
     cursor: pointer;
 }
 
+.logoutButtonSpecial {
+    background-color: #f00; 
+    color: #fff; 
+    border-color: #faa; 
+    /* cursor: pointer; */
+    
+}
 
-
+.logoutButtonSpecial:hover{
+    background-color: #b00; 
+    color: #fff; 
+    border-color: #d00; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+}
 
 
 
@@ -194,13 +209,13 @@ nav .menu span {
 
    
     
-    .logout:hover{
+   /*  .logout:hover{
         background: white;
     }
 
     .logout{
         cursor: pointer;
-    }
+    } */
 }
 
 

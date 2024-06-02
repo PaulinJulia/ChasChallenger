@@ -84,7 +84,7 @@ function LoggedInNav({ handleItemClicked, activeItem, menuOpen }) {
             </li>
             <li>
                 <Link to={"/"}>
-                    <ButtonOne buttonText={"Log out"} className={style.logout} secondary/>
+                    <ButtonOne buttonText={"Logga ut"} className={style.logout} secondary extraClass="logoutButtonSpecial"/>
                 </Link>
             </li>
         </ul>
@@ -113,9 +113,9 @@ function LoggedOutNav({ handleItemClicked, activeItem, menuOpen }) {
                 </NavLink>
             </li>
             <li>
-                <Link to={"/signup"}>
+                {/* <Link to={"/signup"}>
                     <ButtonOne buttonText={"Play Now!"} />
-                </Link>
+                </Link> */}
             </li>
         </ul>
     );

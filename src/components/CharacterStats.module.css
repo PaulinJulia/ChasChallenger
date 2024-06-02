@@ -1,0 +1,22 @@
+.stats-wrapper {
+    text-align: center;
+}
+
+.stats {
+    text-align: center;
+    background-color: rgba(29, 30, 32, 1);
+    border-radius: 40px;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-image {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+}
+.all-stats {
+    max-width: 40rem;
+}

@@ -21,33 +21,32 @@ export function Chat() {
   const [buttonPopup, setButtonPopup] = useState(false);
   const { id } = useSelector((state) => state.character);
 
- 
+  useEffect(() => {
+    const storedData = localStorage.getItem("activeStory");
+    let charactersListFromLocal = [];
 
+    if (storedData) {
+      charactersListFromLocal = JSON.parse(storedData);
+    }
 
-  const storedData = localStorage.getItem("activeStory");
-  let charactersListFromLocal = [];
+    const idAndStory = {
+      id: id,
+      activeStory: false,
+    };
 
-  if (storedData) {
-    charactersListFromLocal = JSON.parse(storedData);
-  }
+    let newArray;
+    if (charactersListFromLocal.some((item) => item.id === id)) {
+      newArray = charactersListFromLocal;
+    } else {
+      newArray = [...charactersListFromLocal, idAndStory];
+    }
 
-  const idAndStory = {
-    id: id,
-    activeStory: false,
-  };
+    const updateActiveStory = newArray.map((item) =>
+      item.id === id ? { ...item, activeStory: true } : item
+    );
 
-  let newArray;
-  if (charactersListFromLocal.some((item) => item.id === id)) {
-    newArray = charactersListFromLocal;
-  } else {
-    newArray = [...charactersListFromLocal, idAndStory];
-  }
-
-  const updateActiveStory = newArray.map((item) =>
-    item.id === id ? { ...item, activeStory: true } : item
-  );
-
-  localStorage.setItem("activeStory", JSON.stringify(updateActiveStory));
+    localStorage.setItem("activeStory", JSON.stringify(updateActiveStory));
+  }, [id]);
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
@@ -115,8 +114,6 @@ export function Chat() {
     }
   }, [history]);
 
-
-
   return (
     <>
       <section className="chat-container">
@@ -137,7 +134,6 @@ export function Chat() {
                 </div>
               </div>
             ))}
-            
           </section>
           <div ref={endOfMessagesRef} />
         </div>

@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(245, 251, 241, 1);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 40px;
+}
+.character-image {
+  width: 13rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.character-name {
+  font-family: "Cinzel Decorative", serif;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+    
+}
+
+.button-wrapper {
+  padding: 0.5rem;
+}
+
+.card-button {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.card-button:hover {
+  opacity: 1;
+}
+.button-icon {
+  width: 3rem;
+  height: 3rem;
+}
+.image-stats-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

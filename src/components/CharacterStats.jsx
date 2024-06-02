@@ -1,45 +1,48 @@
 import React from "react";
+import style from "./CharacterStats.module.css";
 
 function CharacterStatsContainer({ character }) {
-	return (
-		<div className="p-4 w-96 m-0">
-			<h2 className="text-2xl font-bold mb-2 bg-gray-900 px-4 py-2 rounded-full ">
-				Stats
-			</h2>
-			<div className=" bg-gray-900 px-4 py-2 rounded-xl">
-				<div className=" flex items-center justify-around w-40 gap-5 mx-auto py-6">
-                        <img
-							src="src/Images/heart.png"
-							alt=""
-						/>
+  return (
+    <div className={style["stats-wrapper"]}>
+      <h2 className={style.stats}>
+        Stats
+      </h2>
+      <div className="">
+        <div className={style.icons}>
+          <img
+            src="/images/heart.png"
+            className={style["icon-image"]}
+            alt="heart"
+          />
 
-						<img
-							src="src/Images/glass.png"
-							alt=""
-						/>
-						<img
-							src="src/Images/armor.png"
-							alt=""
-						/>
-				</div>
-				
+          <img
+            src="/images/glass.png"
+            className={style["icon-image"]}
+            alt="glass"
+          />
+          <img
+            src="/images/armor.png"
+            className={style["icon-image"]}
+            alt="armor"
+          />
+        </div>
 
-				<div className="">
-					<p>Age: {character.age}</p>
-					<p>Gender: {character.gender}</p>
-					<p>Strength: {character.strength}</p>
-					<p>Dexterity: {character.dexterity}</p>
-					<p>Intelligence: {character.intelligence}</p>
-					<p>Wisdom: {character.wisdom}</p>
-					<p>Constitution: {character.constitution}</p>
-					<p>Charisma: {character.charisma}</p>
-					<p>Backstory: {character.backstory}</p>
-					<p>Profession: {character.profession}</p>
-					<p>Species: {character.species}</p>
-				</div>
-			</div>
-		</div>
-	);
+        <div className={style["all-stats"]}>
+          <p>Age: {character.age}</p>
+          <p>Gender: {character.gender}</p>
+          <p>Strength: {character.strength}</p>
+          <p>Dexterity: {character.dexterity}</p>
+          <p>Intelligence: {character.intelligence}</p>
+          <p>Wisdom: {character.wisdom}</p>
+          <p>Constitution: {character.constitution}</p>
+          <p>Charisma: {character.charisma}</p>
+          <p>Backstory: {character.backstory}</p>
+          <p>Profession: {character.profession}</p>
+          <p>Species: {character.species}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default CharacterStatsContainer;

@@ -18,11 +18,8 @@ function LoginForm() {
 
     try {
       const response = await axios.post(
-        /* "http://localhost:5106/login?useCookies=true", */
-        /* "https://localhost:7110/login?useCookies=true", */
-        /* 'http://52.149.227.5:8081login?useCookies=true', */
-        /* `https://chasfantasy.azurewebsites.net/login?useCookies=true`, */
-        `/api/login?useCookies=true`,
+        `https://chasfantasy.azurewebsites.net/login?useCookies=true`,
+        /* `/api/login?useCookies=true`, */
 
         {
           email,
@@ -30,28 +27,7 @@ function LoginForm() {
         }
       );
 
-      /* console.log("Response Headers:", response.headers); */
-      /* const hejsan = await axios.get('http://localhost:5001/user/character')
-function LoginForm() {
-  const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleLogin = async (event) => {
-    event.preventDefault();
-    setErrorMessage("");
-
-    try {
-      const response = await axios.post(
-        "https://chasfantasy.azurewebsites.net/login?useCookies=true",
-        { email, password }
-      );
-
-      /* const hejsan = await axios.get('http://localhost:5001/user/character')
-            console.log("detta är hejsan", hejsan)
-            console.log(response); */
-
+   
       if (response.status === 200) {
         console.log("Login succeeded!");
       }

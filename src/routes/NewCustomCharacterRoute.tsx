@@ -7,7 +7,6 @@ import AbilityAttribute from "../types/AbilityAttributes";
 import AbilityScoreOption from "../types/AbilityScoreOption";
 import { AbilityScoreDropdown } from "../components/AbilityScoreDropdown";
 import Profession, { ProfessionsArray } from "../types/Profession";
-import Species /*, { SpeciesArray }*/ from "../types/Species";
 import axios from "axios";
 /* import Footer from "../components/Footer"; */
 
@@ -48,8 +47,8 @@ const handleGenerateAvatarsButtonClicked = async (
   try {
     setLoadingAvatars(true);
     const result = await axios.post(
-      "https://chasfantasy.azurewebsites.net/api/Image/CreateProfileImageWithAI",
-      // "/api/Image/CreateProfileImageWithAI",
+      // "https://chasfantasy.azurewebsites.net/api/Image/CreateProfileImageWithAI",
+      "/api/Image/CreateProfileImageWithAI",
       {
         ...getValues(),
         level: 0,
@@ -65,84 +64,74 @@ const handleGenerateAvatarsButtonClicked = async (
           ({ expiryTime: result.data.expiryTime, url }) as AvatarOption
       ),
     ]);
-
-    //TODO: this with other controls to swap between
-    // setValue: UseFormSetValue<Character>,
-    // setAvatarIconPreviewUrl: React.Dispatch<React.SetStateAction<string>>
-    // const tempResonese = "https://avatars.githubusercontent.com/u/72140147?v=4";
-    // setAvatarIconPreviewUrl(tempResonese); //Preview
-    // setValue("imageURL", tempResonese); //Form data
   } catch (error) {
     setLoadingAvatars(false);
     console.error(error);
   }
 };
 
-const handleGenerateCharacterButtonClicked = (
+const handleGenerateCharacterButtonClicked = async (
   characterPrompt: string,
   setValue: UseFormSetValue<Character>,
   setAbilityScoreAllocations: React.Dispatch<
     React.SetStateAction<AbilityScoreOption[]>
-  >,
-  setAvatarIconPreviewUrl: React.Dispatch<React.SetStateAction<string>>
+  >
 ) => {
-  console.warn("Not yet implemented");
+  try {
+    const characterResult = await axios.post(
+      // "https://chasfantasy.azurewebsites.net/api/character/CreateCharacterWithAi",
+      "/api/character/CreateCharacterWithAi",
+      {
+        message: characterPrompt,
+      }
+    );
+    const character: Character = characterResult.data;
 
-  //TODO: send prompt (characterPrompt) and recieve a response with character data
-  console.log(characterPrompt);
+    setValue("name", character.name);
+    setValue("age", character.age);
+    setValue("gender", character.gender);
 
-  setValue("name", "Genorator Blawg");
-  setValue("age", 999);
-  setValue("gender", "Kvinna");
+    //TODO: Extra, setting like this does not change from "error field is required state".
+    setValue("strength", character.strength);
+    setValue("dexterity", character.dexterity);
+    setValue("intelligence", character.intelligence);
+    setValue("wisdom", character.wisdom);
+    setValue("constitution", character.constitution);
+    setValue("charisma", character.charisma);
+    //All values will be set so this works
+    setAbilityScoreAllocations([
+      {
+        value: 15,
+        avalible: false,
+      },
+      {
+        value: 14,
+        avalible: false,
+      },
+      {
+        value: 13,
+        avalible: false,
+      },
+      {
+        value: 12,
+        avalible: false,
+      },
+      {
+        value: 10,
+        avalible: false,
+      },
+      {
+        value: 8,
+        avalible: false,
+      },
+    ]);
 
-  //TODO: Extra, setting like this does not change from "error field is required state".
-  setValue("strength", 15);
-  setValue("dexterity", 8);
-  setValue("intelligence", 10);
-  setValue("wisdom", 12);
-  setValue("constitution", 13);
-  setValue("charisma", 14);
-  //All values will be set so this works
-  setAbilityScoreAllocations([
-    {
-      value: 15,
-      avalible: false,
-    },
-    {
-      value: 14,
-      avalible: false,
-    },
-    {
-      value: 13,
-      avalible: false,
-    },
-    {
-      value: 12,
-      avalible: false,
-    },
-    {
-      value: 10,
-      avalible: false,
-    },
-    {
-      value: 8,
-      avalible: false,
-    },
-  ]);
-
-  setValue(
-    "backstory",
-    "Hello full character generated with this epic backstory! Wowzers"
-  );
-  setValue("profession", Profession.profession3);
-  setValue("species", Species.human);
-  setValue(
-    "imageURL",
-    "https://images.panda.org/assets/images/pages/welcome/orangutan_1600x1000_279157.jpg"
-  );
-  setAvatarIconPreviewUrl(
-    "https://images.panda.org/assets/images/pages/welcome/orangutan_1600x1000_279157.jpg"
-  );
+    setValue("backstory", character.backstory);
+    setValue("profession", character.profession);
+    setValue("species", character.species);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 const handleResetAllAbilityScoreButtonClicked = (
@@ -215,7 +204,7 @@ export const NewCustomCharacterRoute = () => {
     defaultValues: {
       name: "",
       age: 0,
-      gender: "Man", //TODO: refactor to enum like Species.ts
+      gender: "Man",
       healthPoints: 1,
       strength: 0,
       dexterity: 0,
@@ -224,8 +213,8 @@ export const NewCustomCharacterRoute = () => {
       constitution: 0,
       charisma: 0,
       backstory: "",
-      profession: Profession.profession1,
-      species: Species.human,
+      profession: "",
+      species: "Människa",
       imageURL: "",
       favourite: false,
     },
@@ -286,14 +275,26 @@ export const NewCustomCharacterRoute = () => {
           />
           <button
             type="button"
-            onClick={() =>
-              handleGenerateCharacterButtonClicked(
-                generateCharacterPrompt,
-                setValue,
-                setAbilityScoreAllocations,
-                setAvatarIconPreviewUrl
-              )
-            }
+            onClick={async () => {
+              try {
+                await handleGenerateCharacterButtonClicked(
+                  generateCharacterPrompt,
+                  setValue,
+                  setAbilityScoreAllocations
+                );
+
+                await handleGenerateAvatarsButtonClicked(
+                  getValues,
+                  avatarOptions,
+                  setLoadingAvatars,
+                  setAvatarOptions
+                );
+              } catch (error) {
+                console.log("diud ererror");
+
+                console.error(error);
+              }
+            }}
           >
             Generera Karaktär
           </button>

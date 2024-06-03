@@ -3,7 +3,8 @@ type Character = {
     id?: number;
     name: string;
     age: number;
-    gender: "Man" | "Kvinna" | "Icke-binär";
+    // gender: "Man" | "Kvinna" | "Icke-binär";
+    gender: string;
     // class: string; //enum
     healthPoints: number;
     strength: number;

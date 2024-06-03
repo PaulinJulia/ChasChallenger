@@ -5,55 +5,57 @@ import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 
 const premades: Character[] = [
   {
-    name: "Abc",
-    age: 20,
+    name: "Jonas Eriksson",
+    age: 58,
     gender: "Man",
     healthPoints: 10,
     strength: 15,
-    dexterity: 14,
+    dexterity: 8,
     intelligence: 13,
-    wisdom: 12,
-    constitution: 10,
-    charisma: 8,
+    wisdom: 14,
+    constitution: 12,
+    charisma: 10,
     backstory:
-      "My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory",
+      "Jonas Eriksson, en 58-årig robust snickare, hade ägnat hela sitt liv åt att arbeta med händerna. Redan som ung visade han en medfödd talang för hantverk och en kärlek till doften av nyhugget trä. När han växte upp i en liten by inbäddad i de skandinaviska bergen, lärde Jonas konsten att bearbeta trä av sin far, som också var en skicklig snickare. När han finslipade sina färdigheter under åren utvecklade Jonas en djup uppskattning för skönheten och styrkan som kunde skapas av enkla träbitar.",
     profession: "Snickare",
     species: "Människa",
-    imageURL: "https://avatars.githubusercontent.com/u/72140147?v=4",
+    imageURL: "/src/assets/images/person4.png",
     favourite: false,
   },
   {
-    name: "123",
-    age: 30,
+    name: "Emma Lund",
+    age: 26,
     gender: "Kvinna",
     healthPoints: 10,
-    strength: 15,
+    strength: 10,
     dexterity: 14,
-    intelligence: 13,
-    wisdom: 12,
-    constitution: 10,
-    charisma: 8,
-    backstory: "My backstory",
+    intelligence: 12,
+    wisdom: 8,
+    constitution: 15,
+    charisma: 13,
+    backstory:
+      "Emma Lund föddes i en liten by i utkanten av staden. När hon växte upp visste hon alltid att hon ville bli lärare och inspirera de unga att nå sin fulla potential. Hon utmärkte sig i sina studier och tog examen i toppen av sin klass med en examen i utbildning från det lokala universitetet. Vid 26 år gammal hade Emma redan gjort sig känd som en snäll men ändå bestämd person som verkligen brydde sig om sina elever.",
     profession: "Lärare",
     species: "Människa",
-    imageURL: "",
+    imageURL: "/src/assets/images/person1.png",
     favourite: false,
   },
   {
-    name: "Abc123",
-    age: 40,
+    name: "Eli Sjöö",
+    age: 73,
     gender: "Icke-binär",
     healthPoints: 10,
-    strength: 15,
-    dexterity: 14,
+    strength: 12,
+    dexterity: 8,
     intelligence: 13,
-    wisdom: 12,
+    wisdom: 15,
     constitution: 10,
-    charisma: 8,
-    backstory: "My backstory",
-    profession: "Förare",
+    charisma: 14,
+    backstory:
+      "Eli Sjöö är född och uppvuxen i en liten by i Sverige. Hen har alltid varit fascinerad av lastbilar och den öppna vägen från en ung ålder. Så snart hen var gammal nog började Eli arbeta som lastbilschaufför och korsade hemlandets slingrande vägar. Hens skarpa kvickhet och orädda uppträdande gav hen snabbt respekt från sina kamrater ute på vägarna.",
+    profession: "Lastbilsförare",
     species: "Människa",
-    imageURL: "",
+    imageURL: "/src/assets/images/person2.png",
     favourite: false,
   },
 ];
@@ -80,7 +82,7 @@ export const NewPremadeCharacterRoute = () => {
   return (
     <>
       <main className={style["premade-character"]}>
-        <h1>Färdiggjorda Karaktärer</h1>
+        <h1>Färdiga Karaktärer</h1>
         <ul className={style.charactersList}>
           {premades.map((character: Character, index: number) => {
             return (

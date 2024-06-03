@@ -47,8 +47,8 @@ const handleGenerateAvatarsButtonClicked = async (
   try {
     setLoadingAvatars(true);
     const result = await axios.post(
-      // "https://chasfantasy.azurewebsites.net/api/Image/CreateProfileImageWithAI",
-      "/api/Image/CreateProfileImageWithAI",
+      "https://chasfantasy.azurewebsites.net/api/Image/CreateProfileImageWithAI",
+      // "/api/Image/CreateProfileImageWithAI",
       {
         ...getValues(),
         level: 0,
@@ -213,7 +213,7 @@ export const NewCustomCharacterRoute = () => {
       constitution: 0,
       charisma: 0,
       backstory: "",
-      profession: "",
+      profession: "Arbetslös",
       species: "Människa",
       imageURL: "",
       favourite: false,

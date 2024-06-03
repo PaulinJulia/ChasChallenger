@@ -42,7 +42,7 @@
   width: 50%;
   aspect-ratio: 1/1;
   border-radius: 1rem;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .traits {

@@ -8,10 +8,6 @@ import { selectedCharacterId } from "../Store/Slices/CharacterSlice";
 import axios from "axios";
 import { CharacterId } from "../types/CharacterId";
 
-/* import Footer from "../components/Footer"; */
-import Profession from "../types/Profession";
-import Species from "../types/Species";
-
 const handleDeleteCharacterClicked = async (
   characters: Character[],
   setCharacters: React.Dispatch<React.SetStateAction<Character[]>>,

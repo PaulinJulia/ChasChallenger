@@ -90,7 +90,7 @@
   size: 20px;
   fill: black;
   width: 30px;
-  
+  cursor: pointer;
   
 }
 
@@ -137,7 +137,8 @@
   border: none;
   font-size: 20px !important;
   padding: 10px 0;
-  
+  overflow: hidden;
+  resize: none;
 }
 
 .loader {

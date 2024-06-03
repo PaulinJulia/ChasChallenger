@@ -95,7 +95,7 @@ function LoginForm() {
       
       <div className={style["forgot-password"]}>
         <Link title="Har du bort ditt lösenord?" to={"/error"}>
-          Har du krökat bort ditt lösenord?
+          Har du tappat bort ditt lösenord?
         </Link>
       </div>
       <div className={style["signup-back-wrapper"]}>

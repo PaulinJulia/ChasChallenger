@@ -90,7 +90,7 @@
   size: 20px;
   fill: black;
   width: 30px;
-  
+  cursor: pointer;
   
 }
 
@@ -137,6 +137,8 @@
   border: none;
   font-size: 20px !important;
   padding: 10px 0;
+  overflow: hidden;
+  resize: none;
 }
 
 .loader {
@@ -180,6 +182,7 @@
   }
 }
 
+/* DESKTOP */
 @media (min-width: 400px){
   .chat-container {
     display: flex;
@@ -188,7 +191,44 @@
     width: 40%;
     height: 80vh;
     padding-bottom: 60px;
-    border: 0.1rem solid rgb(255, 0, 208);
+   /*  border: 0.1rem solid rgb(255, 0, 208); */
+  }
+
+  .chat-input {
+    display: flex;
+    align-items: center;
+    position:fixed;
+    
+    bottom: 25px;
+    background-color: white;
+    border-radius: 30px;
+    /* width: 100%; */
+    padding: 0 10px;
+    width: 40%;
+    /* border: 0.1rem solid rgb(255, 0, 208); */
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .inputruta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    height: 5vh;
+    border: none;
+    font-size: 20px !important;
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    resize: none;
+    
   }
 
 }

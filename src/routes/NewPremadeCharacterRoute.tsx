@@ -1,16 +1,13 @@
 import axios from "axios";
 import Character from "../types/Character";
-import Profession from "../types/Profession";
-import Species from "../types/Species";
 import style from "./NewPremadeCharacterRoute.module.css";
 import { Link, NavigateFunction, useNavigate } from "react-router-dom";
-/* import Footer from "../components/Footer"; */
 
 const premades: Character[] = [
   {
     name: "Abc",
     age: 20,
-    gender: "male",
+    gender: "Man",
     healthPoints: 10,
     strength: 15,
     dexterity: 14,
@@ -20,15 +17,15 @@ const premades: Character[] = [
     charisma: 8,
     backstory:
       "My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory My backstory",
-    profession: Profession.profession1,
-    species: Species.human,
+    profession: "Snickare",
+    species: "Människa",
     imageURL: "https://avatars.githubusercontent.com/u/72140147?v=4",
     favourite: false,
   },
   {
     name: "123",
     age: 30,
-    gender: "female",
+    gender: "Kvinna",
     healthPoints: 10,
     strength: 15,
     dexterity: 14,
@@ -37,15 +34,15 @@ const premades: Character[] = [
     constitution: 10,
     charisma: 8,
     backstory: "My backstory",
-    profession: Profession.profession2,
-    species: Species.human,
+    profession: "Lärare",
+    species: "Människa",
     imageURL: "",
     favourite: false,
   },
   {
     name: "Abc123",
     age: 40,
-    gender: "non-binary",
+    gender: "Icke-binär",
     healthPoints: 10,
     strength: 15,
     dexterity: 14,
@@ -54,8 +51,8 @@ const premades: Character[] = [
     constitution: 10,
     charisma: 8,
     backstory: "My backstory",
-    profession: Profession.profession3,
-    species: Species.human,
+    profession: "Förare",
+    species: "Människa",
     imageURL: "",
     favourite: false,
   },
@@ -83,7 +80,7 @@ export const NewPremadeCharacterRoute = () => {
   return (
     <>
       <main className={style["premade-character"]}>
-        <h1>Premade Characters</h1>
+        <h1>Färdiggjorda Karaktärer</h1>
         <ul className={style.charactersList}>
           {premades.map((character: Character, index: number) => {
             return (
@@ -104,21 +101,21 @@ export const NewPremadeCharacterRoute = () => {
                 />
                 <div className={style.traits}>
                   <div className={style.strings}>
-                    <h3>Species</h3>
+                    <h3>Art</h3>
                     <p className="capitalize">{character.species}</p>
                   </div>
                   <div className={style.strings}>
-                    <h3>Gender</h3>
+                    <h3>Kön</h3>
                     <p className="capitalize">{character.gender}</p>
                   </div>
                   <div className={style.strings}>
-                    <h3>Profession</h3>
+                    <h3>Yrke</h3>
                     <p className="capitalize">{character.profession}</p>
                   </div>
                 </div>
                 <div className={style.traits}>
                   <div className={style.numbered}>
-                    <h3>Age</h3>
+                    <h3>Ålder</h3>
                     <p>{character.age}</p>
                   </div>
                   <div className={style.numbered}>
@@ -153,7 +150,7 @@ export const NewPremadeCharacterRoute = () => {
                   </div>
                 </div>
                 <div className={style.strings}>
-                  <h3>Backstory </h3>
+                  <h3>Bakgrund </h3>
                   <p>{character.backstory}</p>
                 </div>
               </li>
@@ -161,7 +158,7 @@ export const NewPremadeCharacterRoute = () => {
           })}
         </ul>
         <Link className={style["back-button"]} relative="path" to="..">
-          Back
+          Tillbaka
         </Link>
       </main>
     </>

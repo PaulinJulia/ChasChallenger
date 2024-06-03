@@ -49,10 +49,10 @@ export const AbilityScoreDropdown = ({
           setAttributeAbilityScore(getValues()[`${abilityScoreAttribute}`]);
         }}
         {...register(`${abilityScoreAttribute}`, {
-          required: `${abilityScoreAttribute} is required!`,
+          required: `${abilityScoreAttribute} krävs!`,
           min: {
             value: 8,
-            message: `You need to choose a value for ${abilityScoreAttribute}!`,
+            message: `Du måste välja ett värde för ${abilityScoreAttribute}!`,
           },
           onChange: (event: ChangeEvent<HTMLSelectElement>) => {
             setAbilityScoreAllocations(() => {
@@ -84,7 +84,7 @@ export const AbilityScoreDropdown = ({
       >
         {[
           <option key={`default${abilityScoreAttribute}`} value={0}>
-            Choose
+            Välj
           </option>,
           ...abilityScoreAllocations.map((abiliyScore) => {
             return (
@@ -100,9 +100,7 @@ export const AbilityScoreDropdown = ({
         ]}
       </select>
       {errors[`${abilityScoreAttribute}`] && (
-        <p className="capitalize">
-          {errors[`${abilityScoreAttribute}`]?.message}
-        </p>
+        <p>{errors[`${abilityScoreAttribute}`]?.message}</p>
       )}
 
       <button
@@ -129,7 +127,7 @@ export const AbilityScoreDropdown = ({
           setAttributeAbilityScore(0);
         }}
       >
-        Reset
+        Återställ
       </button>
     </div>
   );

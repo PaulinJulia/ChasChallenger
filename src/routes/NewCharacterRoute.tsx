@@ -6,7 +6,7 @@ export const NewCharacterRoute = () => {
   return (
     <>
       <main className={style["new-character-route"]}>
-        <h1>New Character</h1>
+        <h1>Ny Karaktär</h1>
         <ul className={style.linksList}>
           <li>
             <Link
@@ -15,10 +15,10 @@ export const NewCharacterRoute = () => {
               to="premade"
               aria-label="Pick from a few pre made characters"
             >
-              <h2>Pre made</h2>
+              <h2>Färdig karaktär</h2>
               <p>
-                Select from a bla of pre made characters with unique
-                characteristics and backstories.
+                Välj från ett sortiment av färdiggjorda karaktärer med unika
+                egenskaper och bakgrundshistorier.
               </p>
             </Link>
           </li>
@@ -29,10 +29,10 @@ export const NewCharacterRoute = () => {
               to="custom"
               aria-label="Create your own fully custom character with optional help from AI"
             >
-              <h2>Custom</h2>
+              <h2>Egen karaktär</h2>
               <p>
-                Create your own fully custom character from scratch with
-                optional help from AI.
+                Skapa din helt egna karaktär från grunden med valfria
+                rekommendationer från AI.
               </p>
             </Link>
           </li>
@@ -43,7 +43,7 @@ export const NewCharacterRoute = () => {
               to=".."
               title="Back"
             >
-              <h2>Back</h2>
+              <h2>Tillbaka</h2>
             </Link>
           </li>
         </ul>

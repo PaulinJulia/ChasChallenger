@@ -5,7 +5,7 @@ function CharacterStatsContainer({ character }) {
   return (
     <div className={style["stats-wrapper"]}>
       <h2 className={style.stats}>
-        Stats
+      Karaktärsdetaljer
       </h2>
       <div className="">
         <div className={style.icons}>
@@ -28,17 +28,17 @@ function CharacterStatsContainer({ character }) {
         </div>
 
         <div className={style["all-stats"]}>
-          <p>Age: {character.age}</p>
-          <p>Gender: {character.gender}</p>
+          <p>Ålder: {character.age}</p>
+          <p>Kön: {character.gender}</p>
           <p>Strength: {character.strength}</p>
           <p>Dexterity: {character.dexterity}</p>
           <p>Intelligence: {character.intelligence}</p>
           <p>Wisdom: {character.wisdom}</p>
           <p>Constitution: {character.constitution}</p>
           <p>Charisma: {character.charisma}</p>
-          <p>Species: {character.species}</p>
-          <p>Profession: {character.profession}</p>
-          <p>Backstory: {character.backstory}</p>
+          <p>Art: {character.species}</p>
+          <p>Yrke: {character.profession}</p>
+          <p>Bakgrund: {character.backstory}</p>
         </div>
       </div>
     </div>

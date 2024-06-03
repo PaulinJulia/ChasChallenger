@@ -48,7 +48,6 @@ const handleGenerateAvatarsButtonClicked = async (
   try {
     setLoadingAvatars(true);
     const result = await axios.post(
-      //TODO: NEEDS a loading indicator
       "https://chasfantasy.azurewebsites.net/api/Image/CreateProfileImageWithAI",
       // "/api/Image/CreateProfileImageWithAI",
       {
@@ -94,7 +93,7 @@ const handleGenerateCharacterButtonClicked = (
 
   setValue("name", "Genorator Blawg");
   setValue("age", 999);
-  setValue("gender", "female");
+  setValue("gender", "Kvinna");
 
   //TODO: Extra, setting like this does not change from "error field is required state".
   setValue("strength", 15);
@@ -216,7 +215,7 @@ export const NewCustomCharacterRoute = () => {
     defaultValues: {
       name: "",
       age: 0,
-      gender: "male", //TODO: refactor to enum like Species.ts
+      gender: "Man", //TODO: refactor to enum like Species.ts
       healthPoints: 1,
       strength: 0,
       dexterity: 0,
@@ -274,13 +273,13 @@ export const NewCustomCharacterRoute = () => {
   return (
     <>
       <main className={style["custom-character"]}>
-        <h1>Custom Character</h1>
+        <h1>Egen Karaktär</h1>
         <div className={style["generate-character"]}>
-          <h2>Generate With Prompt</h2>
+          <h2>Generera Med Prompt</h2>
           <input
             type="text"
             value={generateCharacterPrompt}
-            placeholder="A strong brutish farmer guy..."
+            placeholder="En gammal bonde med ett mörkt förflutet..."
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               setGenerateCharacterPrompt(event.target.value)
             }
@@ -296,7 +295,7 @@ export const NewCustomCharacterRoute = () => {
               )
             }
           >
-            Generate Character
+            Generera Karaktär
           </button>
         </div>
         <form
@@ -307,14 +306,14 @@ export const NewCustomCharacterRoute = () => {
         >
           <div>
             <label htmlFor="name">
-              <h2>Name</h2>
+              <h2>Namn</h2>
             </label>
             <input
               type="text"
               id="name"
-              placeholder="John Doe..."
+              placeholder="Sven Svensson..."
               {...register("name", {
-                required: "Name is required!",
+                required: "Ett namn krävs!",
               })}
             />
             {errors.name && <p>{errors.name.message}</p>}
@@ -322,16 +321,16 @@ export const NewCustomCharacterRoute = () => {
 
           <div>
             <label htmlFor="age">
-              <h2>Age</h2>
+              <h2>Ålder</h2>
             </label>
             <input
               type="number"
               id="age"
               {...register("age", {
-                required: "Age is required!",
+                required: "En ålder krävs!",
                 min: {
                   value: 0,
-                  message: "Age must be a positive value!",
+                  message: "Ålder måste vara ett positivt värde!",
                 },
               })}
             />
@@ -339,38 +338,38 @@ export const NewCustomCharacterRoute = () => {
           </div>
 
           <div>
-            <h2>Gender</h2>
+            <h2>Kön</h2>
             <div className={style["genders"]}>
               <span>
-                <label htmlFor="gender-male">Male:</label>
+                <label htmlFor="gender-male">Man:</label>
                 <input
                   type="radio"
                   id="gender-male"
-                  value="male"
+                  value="Man"
                   {...register("gender", {
-                    required: "Gender is required!",
+                    required: "Ett kön krävs!",
                   })}
                 />
               </span>
               <span>
-                <label htmlFor="gender-female">Female:</label>
+                <label htmlFor="gender-female">Kvinna:</label>
                 <input
                   type="radio"
                   id="gender-female"
-                  value="female"
+                  value="Kvinna"
                   {...register("gender", {
-                    required: "Gender is required!",
+                    required: "Ett kön krävs!",
                   })}
                 />
               </span>
               <span>
-                <label htmlFor="gender-non-binary">Non-binary:</label>
+                <label htmlFor="gender-non-binary">Icke-binär:</label>
                 <input
                   type="radio"
                   id="gender-non-binary"
-                  value="non-binary"
+                  value="Icke-binär"
                   {...register("gender", {
-                    required: "Gender is required!",
+                    required: "Ett kön krävs!",
                   })}
                 />
               </span>
@@ -397,7 +396,7 @@ export const NewCustomCharacterRoute = () => {
         </div> */}
 
           <div>
-            <h2>Ability Scores</h2>
+            <h2>Förmågo Fördelning</h2>
             <div className={style["ability-scores"]}>
               {abilityAttributes.map((abilityAttribute: AbilityAttribute) => {
                 return (
@@ -424,7 +423,7 @@ export const NewCustomCharacterRoute = () => {
                 )
               }
             >
-              Reset All
+              Återställ Alla
             </button>
           </div>
 
@@ -451,12 +450,12 @@ export const NewCustomCharacterRoute = () => {
 
           <div>
             <label htmlFor="profession">
-              <h2>Profession</h2>
+              <h2>Yrke</h2>
             </label>
             <select
               id="profession"
               {...register("profession", {
-                required: "Profession is required!",
+                required: "Ett yrke krävs!",
               })}
             >
               {ProfessionsArray().map((profession) => {
@@ -473,12 +472,12 @@ export const NewCustomCharacterRoute = () => {
 
           <div>
             <label htmlFor="backstory">
-              <h2>Backstory</h2>
+              <h2>Bakgrund</h2>
             </label>
             <textarea
               id="backstory"
               className={style.backstory}
-              placeholder="Write your characters backstory here..."
+              placeholder="Skriv din karaktärs bakgrundshistoria här..."
               {...register("backstory", {
                 maxLength: {
                   value: 500,
@@ -503,7 +502,7 @@ export const NewCustomCharacterRoute = () => {
             <img
               className={style["your-avatar"]}
               src={avatarIconPreviewUrl}
-              alt="Your Avatar"
+              alt="Din Avatar"
             />
             <button
               type="button"
@@ -516,10 +515,10 @@ export const NewCustomCharacterRoute = () => {
                 )
               }
             >
-              Generate New
+              Generera Fler
             </button>
             {(avatarOptions.length > 0 || loadingAvatars) && (
-              <h3>Avatar Options {loadingAvatars && " [Loading...]"}</h3>
+              <h3>Avatar Alternativ {loadingAvatars && " [Laddar...]"}</h3>
             )}
             {avatarOptions.length > 0 && (
               <ul className={style["avatar-options-list"]}>
@@ -561,13 +560,12 @@ export const NewCustomCharacterRoute = () => {
             )}
           </div>
 
-          <button type="submit">Create!</button>
+          <button type="submit">Skapa Karaktär!</button>
         </form>
         <Link className={style["back-button"]} relative="path" to="..">
-          Back
+          Tillbaka
         </Link>
       </main>
-      {/* <Footer /> */}
     </>
   );
 };

@@ -22,7 +22,7 @@ function CharacterCard({ character, onDelete, onFavorite, onSelect }) {
         <button
           className={style["card-button"]}
           type="button"
-          title="About"
+          title="Om karaktär"
           onClick={(e) => {
             e.stopPropagation();
             showCharacterStats(character);
@@ -31,7 +31,7 @@ function CharacterCard({ character, onDelete, onFavorite, onSelect }) {
           <img
             src="/images/info.png"
             className={style["button-icon"]}
-            alt="About character"
+            alt="Om karaktär"
           />
         </button>
         {/* <button
@@ -52,7 +52,7 @@ function CharacterCard({ character, onDelete, onFavorite, onSelect }) {
         <button
           className={style["card-button"]}
           type="button"
-          title="Delete"
+          title="Ta bort karaktär"
           onClick={(e) => {
             e.stopPropagation();
             onDelete(e.target.closest("li"), character);
@@ -61,7 +61,7 @@ function CharacterCard({ character, onDelete, onFavorite, onSelect }) {
           <img
             src="/images/trash.png"
             className={style["button-icon"]}
-            alt="Delete character"
+            alt="Ta bort karaktär"
           />
         </button>
       </div>

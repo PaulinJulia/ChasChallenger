@@ -1,11 +1,9 @@
-import Profession from "./Profession";
-import Species from "./Species";
 
 type Character = {
     id?: number;
     name: string;
     age: number;
-    gender: string; //TODO: refactor to enum like Species.ts
+    gender: "Man" | "Kvinna" | "Icke-binär";
     // class: string; //enum
     healthPoints: number;
     strength: number;
@@ -15,8 +13,10 @@ type Character = {
     constitution: number;
     charisma: number;
     backstory: string;
-    profession: Profession;
-    species: Species;
+    // profession: Profession;
+    profession: string;
+    // species: Species;
+    species: string;
     imageURL: string;
     favourite: boolean;
   };

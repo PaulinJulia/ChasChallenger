@@ -4,6 +4,7 @@
   justify-content: space-around;
 }
 
+
 .form {
   display: flex;
   flex-direction: column;
@@ -11,12 +12,13 @@
   justify-content: space-evenly;
   border: 1px solid white;
   border-radius: 40px;
-  border-color: solid rgb(254, 255, 255);
+  /* border-color: solid rgb(254, 255, 255); */
   margin: 3rem 1rem 3rem 1rem;
   background-color: rgba(29, 30, 32, 1);
   padding: 1rem;
   width: 45vh;
   height: 50vh;
+  /* border-color :solid greenyellow; */
   
 
   
@@ -26,12 +28,9 @@
   
   text-align: center;
   font-size: 1.75rem;
-  margin-top: 2vh;
+  margin-top: 1vh;
   margin-bottom: 2vh;
  
- 
-  
-  
 }
 
 
@@ -175,3 +174,20 @@
     
   }
 }
+
+
+/* MOBIL */
+/* @media (max-width: 375px){
+
+  .title {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+   
+  }
+
+
+
+
+} */

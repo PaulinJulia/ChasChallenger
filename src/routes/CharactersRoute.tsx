@@ -8,6 +8,8 @@ import { selectedCharacterId } from "../Store/Slices/CharacterSlice";
 import axios from "axios";
 /* import Footer from "../components/Footer"; */
 import { CharacterId } from "../types/CharacterId";
+import Profession from "../types/Profession";
+import Species from "../types/Species";
 
 const handleDeleteCharacterClicked = async (
   characters: Character[],
@@ -22,7 +24,7 @@ const handleDeleteCharacterClicked = async (
 
     /*const response =*/ await axios.delete(
       /* "https://chasfantasy.azurewebsites.net/api/Character/DeleteCharacter", */
-      '/api/Character/DeleteCharacter',
+      "/api/Character/DeleteCharacter",
       {
         data: {
           id: id,
@@ -47,7 +49,7 @@ const getCharacters = async (): Promise<Character[] | undefined> => {
       /* "http://localhost:5106/api/Character/GetCharacters" */
       /* `https://localhost:7110/api/Character/GetCharacters`  */
       /* `52.149.227.5:8081/api/Character/GetCharacters`, */
-      /* `https://chasfantasy.azurewebsites.net/api/Character/GetCharacters` */
+      /*`https://chasfantasy.azurewebsites.net/api/Character/GetCharacters` */
       `/api/Character/GetCharacters`
     );
 
@@ -94,9 +96,12 @@ export const CharactersRoute = () => {
     }
   };
   return (
-    <main>
+    <main className={style["characters-route"]}>
       <h1>Your Characters</h1>
-      <ul>
+      <Link className={style["link"]} relative="path" to="new">
+        New
+      </Link>
+      <ul className={style["characters-list"]}>
         {characters.map((character, index) => {
           return (
             <CharacterCard
@@ -115,10 +120,6 @@ export const CharactersRoute = () => {
           );
         })}
       </ul>
-      <Link className={style.link} relative="path" to="new">
-        New
-      </Link>
-      {/* <Footer /> */}
     </main>
   );
 };

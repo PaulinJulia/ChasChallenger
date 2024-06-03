@@ -1,9 +1,13 @@
 .custom-character {
-  padding: 0 2.5rem;
+  padding: 2rem 1.5rem;
+}
+
+.custom-character ul {
+  list-style: none;
 }
 
 .custom-character h1 {
-  padding: 1rem 0;
+  padding-bottom: 2rem;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -15,12 +19,12 @@
 
 .custom-character h3 {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .custom-character input,
 .custom-character textarea {
-  padding: 0.25rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   font: inherit;
   color: black;
@@ -57,6 +61,20 @@
   border-bottom: 2px solid white;
 }
 
+.ability-scores {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.ability-scores button {
+  max-width: 100%;
+}
+
+.ability-scores-reset-all {
+  margin-top: 1rem;
+}
+
 .genders {
   display: flex;
   justify-content: space-between;
@@ -68,13 +86,13 @@
   align-items: center;
   gap: 0.5rem;
   padding-right: 0.5rem;
-  border: 2px solid white;
   border-radius: 0.5rem;
-  background-color: #303030;
+  background-color: white;
 }
 
 .genders > span label {
   padding: 0.5rem 0 0.5rem 0.5rem;
+  color: black;
 }
 
 .backstory {
@@ -88,9 +106,9 @@
   flex-direction: column;
 }
 
-.avatar img {
+.your-avatar {
   aspect-ratio: 1/1;
-  width: 12rem;
+  width: 50%;
   align-self: center;
   object-fit: cover;
 }
@@ -102,32 +120,98 @@
 }
 
 .avatar-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  border: 2px dashed white;
   cursor: pointer;
 }
 
-.backButton {
-  padding-bottom: 1.5rem;
+.avatar-option img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border: 4px dashed var(--green);
+}
+
+button,
+.back-button {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid var(--light-green);
+  border-radius: 0.8rem;
+  background-color: var(--green);
+  text-decoration: none;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+button:hover,
+.back-button:hover {
+  scale: 1.05;
 }
 
 @media (min-width: 425px) {
+  .custom-character {
+    padding: 2rem 2.5rem;
+  }
+
+  .generate-character {
+    max-width: 425px;
+  }
+
+  .new-character-form {
+    max-width: 425px;
+  }
+
+  button,
+  .back-button {
+    max-width: 425px;
+  }
 }
 
 @media (min-width: 768px) {
-  /* .avatar-options-list {
+  .generate-character {
+    max-width: 768px;
+  }
+
+  .new-character-form {
+    max-width: 768px;
+  }
+
+  .ability-scores {
     grid-template-columns: repeat(2, 1fr);
-  } */
+  }
+
+  .genders {
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  .your-avatar {
+    width: 30%;
+  }
+
+  .avatar-options-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
+  .generate-character {
+    max-width: 1024px;
+  }
+
+  .new-character-form {
+    max-width: 1024px;
+  }
 }
 
 @media (min-width: 1440px) {
 }
 
 @media (min-width: 1920px) {
-}
-
-@media (min-width: 2560px) {
 }

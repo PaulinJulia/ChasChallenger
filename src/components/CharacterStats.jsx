@@ -36,9 +36,9 @@ function CharacterStatsContainer({ character }) {
           <p>Wisdom: {character.wisdom}</p>
           <p>Constitution: {character.constitution}</p>
           <p>Charisma: {character.charisma}</p>
-          <p>Backstory: {character.backstory}</p>
-          <p>Profession: {character.profession}</p>
           <p>Species: {character.species}</p>
+          <p>Profession: {character.profession}</p>
+          <p>Backstory: {character.backstory}</p>
         </div>
       </div>
     </div>

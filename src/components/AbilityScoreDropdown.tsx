@@ -5,6 +5,7 @@ import {
   UseFormRegister,
   UseFormSetValue,
 } from "react-hook-form";
+import style from "./AbilityScoreDropdown.module.css";
 import AbilityAttribute from "../types/AbilityAttributes";
 import AbilityScoreOption from "../types/AbilityScoreOption";
 import Character from "../types/Character";
@@ -33,7 +34,10 @@ export const AbilityScoreDropdown = ({
   const [attributeAbilityScore, setAttributeAbilityScore] = useState(0); //Keeps track of previous value to set it avalible to select.
 
   return (
-    <div id={`${abilityScoreAttribute}-ability-score`}>
+    <div
+      id={`${abilityScoreAttribute}-ability-score`}
+      className={style["ability-score"]}
+    >
       <label htmlFor={`${abilityScoreAttribute}`}>
         <h3 className="capitalize">{`${abilityScoreAttribute}`}</h3>
       </label>

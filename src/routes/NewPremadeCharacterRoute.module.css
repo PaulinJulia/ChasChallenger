@@ -1,5 +1,5 @@
 .premade-character {
-  padding: 0 2.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .charactersList {
@@ -18,8 +18,11 @@
   padding: 1rem;
   border: 2px solid #ffffff;
   border-radius: 1rem;
-  background-color: #385063;
   cursor: pointer;
+}
+
+.character h2 {
+  font-size: 2rem;
 }
 
 .character div.strings {
@@ -36,7 +39,7 @@
 }
 
 .character img {
-  width: 80%;
+  width: 50%;
   aspect-ratio: 1/1;
   border-radius: 1rem;
   object-fit: contain;
@@ -59,11 +62,33 @@
   padding: 0 0.5rem;
 }
 
-.backButton {
-  padding-bottom: 1.5rem;
+.back-button {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid var(--light-green);
+  border-radius: 0.8rem;
+  background-color: var(--green);
+  text-decoration: none;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  scale: 1.05;
 }
 
 @media (min-width: 425px) {
+  .premade-character {
+    padding: 2rem 2.5rem;
+  }
+
+  .back-button {
+    max-width: 425px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -72,7 +97,7 @@
   }
 
   .character img {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -88,7 +113,7 @@
   }
 
   .character img {
-    width: 65%;
+    width: 55%;
   }
 }
 

@@ -34,7 +34,7 @@ function CharacterCard({ character, onDelete, onFavorite, onSelect }) {
             alt="About character"
           />
         </button>
-        <button
+        {/* <button
           className={style["card-button"]}
           type="button"
           title="Favorite"
@@ -48,7 +48,7 @@ function CharacterCard({ character, onDelete, onFavorite, onSelect }) {
             className={style["button-icon"]}
             alt="Favorite character"
           />
-        </button>
+        </button> */}
         <button
           className={style["card-button"]}
           type="button"

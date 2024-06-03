@@ -3,7 +3,7 @@
 @tailwind components; */
 @tailwind utilities;
 
-
+:root {
   /* --button-color: rgba(175, 209, 130, 1); */
   /* --button-yellow-color: rgba(242, 242, 176, 1); */
   /*   --button-green-color: rgba(165, 183, 53, 1);
@@ -12,16 +12,19 @@
   /*  --black-color: rgba(28, 25, 25, 1); */
   /* --text-color: rgba(245, 251, 241, 1); */
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: rgba(245, 251, 241, 1);
+  --green: #a5b735;
+  --light-green: #a5c177;
+
+  --green-gradient: radial-gradient(#f0f0af, var(--green));
+  --green-gradient-hover: radial-gradient(#ffffff, var(--green));
 }
 
-
-
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(245, 251, 241, 1);
+}
 
 /* * {
   box-sizing: border-box;
@@ -86,12 +89,12 @@ textarea {
   color: black;
 } */
 
-/* select,
+select,
 select option {
   font: inherit;
   text-transform: capitalize;
   color: black;
-} */
+}
 
 main {
   display: flex;
@@ -112,9 +115,9 @@ main {
   margin-left: auto;
 }
 
-/* .capitalize::first-letter {
+.capitalize::first-letter {
   text-transform: capitalize;
-} */
+}
 
 /* @media (min-width: 375px) {
   .container {

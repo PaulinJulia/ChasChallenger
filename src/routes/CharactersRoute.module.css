@@ -1,16 +1,11 @@
-/* @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"); */
-
-.dunga {
-  font-size: 1rem;
+.characters-route {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
-.page {
-  width: 100%;
-  padding: 1rem 0;
-  gap: 1rem;
-}
-
-.charactersList {
+.characters-list {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -67,19 +62,19 @@
 }
 
 .link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   padding: 0.5rem;
-  border: 2px solid white;
+  border: 2px solid var(--light-green);
   border-radius: 0.8rem;
-  background-color: #303030;
+  background-color: var(--green);
   text-decoration: none;
+  transition: 0.15s;
 }
 
 .link:hover {
-  background-color: #404040;
-}
-
-.link:active {
-  background-color: #202020;
+  scale: 1.1;
 }
 
 @media (min-width: 375px) {
@@ -89,24 +84,29 @@
 }
 
 @media (min-width: 425px) {
+  .character-route {
+    padding: 2rem 2.5rem;
+  }
+
+  .characters-list {
+    max-width: 425px;
+  }
+
+  .link {
+    max-width: 425px;
+  }
 }
 
 @media (min-width: 768px) {
-  .charactersList {
+  .characters-list {
     max-width: 32rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .charactersList {
-    max-width: 42rem;
-  }
 }
 
 @media (min-width: 1440px) {
-  .charactersList {
-    max-width: 52rem;
-  }
 }
 
 @media (min-width: 1920px) {

@@ -160,11 +160,10 @@ export const NewPremadeCharacterRoute = () => {
             );
           })}
         </ul>
-        <Link className={style.backButton} relative="path" to="..">
+        <Link className={style["back-button"]} relative="path" to="..">
           Back
         </Link>
       </main>
-      {/* <Footer /> */}
     </>
   );
 };

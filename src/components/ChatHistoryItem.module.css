@@ -60,7 +60,7 @@
   align-self: flex-start;
   background-color: #2eb3c2;
   border-top-left-radius: 0;
-  width: 50%;
+  width: 60%;
 }
 .chat-response-bubble {
   padding: 15px;
@@ -71,5 +71,5 @@
   background-color: #7553ff;
   border-top-right-radius: 0;
   margin-left: auto;
-  width: 50%;
+  width: 70%;
 }

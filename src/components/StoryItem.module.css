@@ -3,6 +3,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+width: 45vh;
+/* border:solid green; */
 }
 .card {
   max-width: 50rem;
@@ -10,13 +12,13 @@ align-items: center;
   border-radius: 30px;
   border: 6px solid rgba(112, 132, 73, 1);
   background: radial-gradient( rgba(245, 251, 241, 1), rgba(112, 132, 73, 1));
-  color: var(--black-color);
+  color: black;
   margin-bottom: 1rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
   list-style: none;
 }
 .summary {
-  color: var(--black-color);
+  color: black;
   font-size: 18px;
   padding: 1rem;
 font-weight: 600;
@@ -28,4 +30,8 @@ font-weight: 600;
   font-size: 1.25rem;
   margin: 0.5rem;
   width: 256px;
+  cursor: pointer;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
 }
+

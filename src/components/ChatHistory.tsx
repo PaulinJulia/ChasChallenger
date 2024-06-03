@@ -12,8 +12,13 @@ const ChatHistory = () => {
   useEffect(() => {
     if (id !== undefined) {
       const fetchStoryMessages = async () => {
-        const allMessages = await getStoryMessages(id);
-        setMessages(allMessages.reverse());
+        try {
+          const allMessages = await getStoryMessages(id);
+          setMessages(allMessages.reverse());
+        } catch (error) {
+          console.error("Error fetching story messages:", error);
+          setMessages([]);
+        }
       };
       fetchStoryMessages();
     }

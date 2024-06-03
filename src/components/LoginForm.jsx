@@ -55,7 +55,7 @@ function LoginForm() {
 
   return (
     <div className="container">
-      <form className={style.form}onSubmit={handleLogin} >
+      <form className={style.form}>
         <h2 className={style.title}>Logga in</h2>
         <div className={style["inputs"]}>
           <label className={style["label-name"]} htmlFor="email">
@@ -83,24 +83,21 @@ function LoginForm() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+        {errorMessage && <p className="error">{errorMessage}</p>}
+      </form>
+      <button
+        title="Log in"
+        className={style["login-button"]}
+        onClick={handleLogin}  
+      >
+        Logga in
+      </button>
       
-        <div className={style["login-checkbox-wrapper"]}>
-          <button
-            title="Log in"  
-            className={style["login-button"]}
-            type="submit">
-            Logga in
-          </button>
-          {errorMessage && <p className="error">{errorMessage}</p>}
-          
-        </div>
-        </form>
-        <div className={style["forgot-password"]}>
-          <Link title="Har du  bort ditt lösenord?" to={"/error"}>
-            Har du krökat bort ditt lösenord?
-          </Link>
-        </div>
-        
+      <div className={style["forgot-password"]}>
+        <Link title="Har du bort ditt lösenord?" to={"/error"}>
+          Har du tappat bort ditt lösenord?
+        </Link>
+      </div>
       <div className={style["signup-back-wrapper"]}>
         <Link to="/signup">
           <button title="Sign up" className={style["signup-button"]}>

@@ -34,7 +34,7 @@
 .inputs {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 3rem;
   width: 70%  
 }
@@ -150,7 +150,7 @@
     
     height: 5vh;
     text-align: center;
-    width: 21vh;
+    width: 20vh;
   }
 
   .goback {
@@ -215,9 +215,9 @@
     margin-bottom: 3vh;
     margin-top:16vh;
     
-    height: 5vh;
+    height: 6vh;
     text-align: center;
-    width: 21vh;
+    width: 23vh;
   }
 
 }

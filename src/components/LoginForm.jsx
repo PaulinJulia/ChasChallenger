@@ -6,6 +6,12 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 
 axios.defaults.withCredentials = true;
 
+const handleKeyDown = (event) => {
+  if (event.key === 'Enter') {
+    handleLogin(event);
+  }
+};
+
 function LoginForm() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -53,6 +59,8 @@ function LoginForm() {
     }
   };
 
+ 
+
   return (
     <div className="container">
       <form className={style.form}>
@@ -68,6 +76,8 @@ function LoginForm() {
             placeholder="Mejladress"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            /* onKeyDown={handleLogin}  */
+            
           />
         </div>
         <div className={style["inputs"]}>
@@ -81,16 +91,18 @@ function LoginForm() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            /* onKeyDown={handleLogin}  */
           />
         </div>
         {errorMessage && <p className="error">{errorMessage}</p>}
       </form>
       <button
+        type="submit"
         title="Log in"
         className={style["login-button"]}
-        onClick={handleLogin}  
+        onClick={handleLogin}
       >
-        Logga in
+        <p>Logga in</p>
       </button>
       
       <div className={style["forgot-password"]}>

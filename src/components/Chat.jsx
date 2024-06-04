@@ -167,7 +167,9 @@ export function Chat() {
               )}
             </button>
           </div>
+          
         </form>
+       
       </section>
       <GameSettingsPopup trigger={buttonPopup} setTrigger={setButtonPopup} />
     </>

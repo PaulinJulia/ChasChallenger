@@ -173,6 +173,34 @@
     
     
   }
+
+
+
+  .login-button {
+    
+    padding: 0.1rem 1.4rem;
+    border: 1px solid rgba(165, 193, 119, 1);
+    border-radius: 2rem;
+    background: radial-gradient( rgba(242, 242, 176, 1), rgba(165, 183, 53, 1));
+  
+    font-size: 1rem;
+    color: rgba(28, 25, 25, 1);
+   
+    margin-bottom: 3vh;
+    
+    height: 5vh;
+    text-align: center;
+    width: 21vh;
+  }
+
+  .login-button p{
+    
+   color: black;
+  margin-top: 8px;
+   
+   
+  }
+
 }
 
 

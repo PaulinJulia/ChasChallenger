@@ -85,19 +85,19 @@ const handleGenerateCharacterButtonClicked = async (
         message: characterPrompt,
       }
     );
-    const character: Character = characterResult.data;
+    const character: any = characterResult.data;
 
-    setValue("name", character.name);
-    setValue("age", character.age);
-    setValue("gender", character.gender);
+    setValue("name", character.Name);
+    setValue("age", character.Age);
+    setValue("gender", character.Gender);
 
     //TODO: Extra, setting like this does not change from "error field is required state".
-    setValue("strength", character.strength);
-    setValue("dexterity", character.dexterity);
-    setValue("intelligence", character.intelligence);
-    setValue("wisdom", character.wisdom);
-    setValue("constitution", character.constitution);
-    setValue("charisma", character.charisma);
+    setValue("strength", character.Strength);
+    setValue("dexterity", character.Dexterity);
+    setValue("intelligence", character.Intelligence);
+    setValue("wisdom", character.Wisdom);
+    setValue("constitution", character.Constitution);
+    setValue("charisma", character.Charisma);
     //All values will be set so this works
     setAbilityScoreAllocations([
       {
@@ -126,9 +126,9 @@ const handleGenerateCharacterButtonClicked = async (
       },
     ]);
 
-    setValue("backstory", character.backstory);
-    setValue("profession", character.profession);
-    setValue("species", character.species);
+    setValue("backstory", character.Backstory);
+    setValue("profession", character.Profession);
+    setValue("species", character.Species);
   } catch (error) {
     console.error(error);
   }

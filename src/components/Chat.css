@@ -4,8 +4,6 @@
   align-items: center;
   width: 90%;
   height: 90vh;
-  
-  /* border:solid greenyellow */
 }
 
 .chat-box {
@@ -94,7 +92,6 @@
   fill: black;
   width: 30px;
   cursor: pointer;
-  
 }
 
 
@@ -103,7 +100,6 @@
   display: flex;
   align-items: center;
   position: relative;
-  
 }
 
 .inputruta{
@@ -169,7 +165,6 @@
     width: 40%;
     height: 80vh;
     padding-bottom: 60px;
-    /* border: 0.1rem solid rgb(255, 0, 208); */
   }
 
   .chat-input {
@@ -180,10 +175,8 @@
     bottom: 25px;
     background-color: white;
     border-radius: 30px;
-    /* width: 100%; */
     padding: 0 10px;
     width: 40%;
-    /* border: 0.1rem solid rgb(255, 0, 208); */
   }
 
   .input-container {
@@ -192,7 +185,6 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    /* border:solid greenyellow; */
   }
 
   .inputruta{
@@ -220,7 +212,6 @@
     overflow-x: hidden;
     overflow-y: auto;
     height: 100%;
-    /* border: 0.1rem solid rgb(0, 255, 183); */
   }
 
   .sendButton{

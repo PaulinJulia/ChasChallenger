@@ -175,10 +175,6 @@
     padding: 1rem;
     width: 38vh;
     height: 45vh;
-    
-  
-    
-    
   }
 
 
@@ -207,20 +203,3 @@
 }
 
 }
-
-
-/* MOBIL */
-/* @media (max-width: 375px){
-
-  .title {
-    text-align: center;
-    font-size: 1.75rem;
-    margin-top: 7vh;
-    margin-bottom: 2vh;
-   
-  }
-
-
-
-
-} */

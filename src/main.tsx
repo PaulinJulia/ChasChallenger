@@ -44,10 +44,6 @@ const router = createBrowserRouter([
         path: "/characters/new/premade",
         element: <NewPremadeCharacterRoute />,
       },
-      // {
-      //   path: "/welcome",
-      //   element: <MastersWelcomeRoute />,
-      // },
       {
         path: "/howtoplay",
         element: <HowToPlay />,
@@ -64,10 +60,6 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <SignupRoute />,
       },
-      // {
-      //   path: "/countinuestory",
-      //   element: <CountinueStoryRoute />, //continue
-      // },
       {
         path: "/stories",
         element: <StoriesRoute />,

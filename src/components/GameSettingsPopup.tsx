@@ -1,8 +1,6 @@
 import style from "./GameSettingsPopup.module.css";
 import { GameSettingsPopupProps } from "../types/types";
 import { Link } from "react-router-dom";
-//import { createResumeStory } from "../api/resumeStoryApi";
-// import { FaRegCircleXmark } from "react-icons/fa6";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 export function GameSettingsPopup(props: GameSettingsPopupProps) {

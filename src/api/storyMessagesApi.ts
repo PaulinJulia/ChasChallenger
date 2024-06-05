@@ -18,3 +18,4 @@ export const getStoryMessages = async (id: number) => {
     return null;
   }
 };
+

@@ -89,12 +89,12 @@ textarea {
   color: black;
 } */
 
-select,
+/* select,
 select option {
   font: inherit;
   text-transform: capitalize;
   color: black;
-}
+} */
 
 main {
   display: flex;
@@ -115,9 +115,9 @@ main {
   margin-left: auto;
 }
 
-.capitalize::first-letter {
+/* .capitalize::first-letter {
   text-transform: capitalize;
-}
+} */
 
 /* @media (min-width: 375px) {
   .container {

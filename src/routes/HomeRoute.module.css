@@ -46,6 +46,12 @@
   margin-bottom: 4rem;
   margin-top: 4vh;
   cursor: pointer;
+  
+}
+
+.playbutton p{
+  text-decoration-line: none;
+  color: black;
 }
 
 .playbutton:hover {

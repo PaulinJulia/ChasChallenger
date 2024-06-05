@@ -96,14 +96,21 @@
   
 }
 
+.login-button p {
+    
+  color: black;
+  /* margin-top: 1px; */
+  /* width: 10px; */
+  margin-bottom: 20px;
+}
+
 
 .forgot-password {
 
   padding: 1rem;
   text-decoration: underline;
   margin-bottom: 1rem;
- 
-  
+
 }
 
 
@@ -195,11 +202,9 @@
 
   .login-button p{
     
-   color: black;
+  color: black;
   margin-top: 8px;
-   
-   
-  }
+}
 
 }
 

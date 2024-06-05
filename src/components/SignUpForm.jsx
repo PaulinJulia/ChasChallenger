@@ -19,8 +19,8 @@ function SignUpForm() {
     }
     try {
       const response = await axios.post(
-        `https://chasfantasy.azurewebsites.net/register`,
-       /*  `/api/register`, */
+       /*  `https://chasfantasy.azurewebsites.net/register`, */
+        `/api/register`,
         
         {
           email,

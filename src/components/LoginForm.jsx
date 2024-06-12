@@ -24,8 +24,9 @@ function LoginForm() {
 
     try {
       const response = await axios.post(
-        /* `https://chasfantasy.azurewebsites.net/login?useCookies=true`, */
-        `/api/login?useCookies=true`,
+        /* "http://localhost:5106/api/login?useCookies=true", */
+        `https://chasfantasy.azurewebsites.net/login?useCookies=true`,
+        /* `/api/login?useCookies=true`, */
 
         {
           email,

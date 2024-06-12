@@ -47,8 +47,9 @@ const handleGenerateAvatarsButtonClicked = async (
   try {
     setLoadingAvatars(true);
     const result = await axios.post(
-      /* "https://chasfantasy.azurewebsites.net/api/Image/CreateProfileImageWithAI", */
-      "/api/Image/CreateProfileImageWithAI",
+      /* "http://localhost:5106/api/Image/CreateProfileImageWithAI", */
+      "https://chasfantasy.azurewebsites.net/api/Image/CreateProfileImageWithAI",
+      /* "/api/Image/CreateProfileImageWithAI", */
       {
         ...getValues(),
         level: 0,
@@ -79,8 +80,9 @@ const handleGenerateCharacterButtonClicked = async (
 ) => {
   try {
     const characterResult = await axios.post(
-      // "https://chasfantasy.azurewebsites.net/api/character/CreateCharacterWithAi",
-      "/api/character/CreateCharacterWithAi",
+      /* "http://localhost:5106/api/character/CreateCharacterWithAi", */
+      "https://chasfantasy.azurewebsites.net/api/character/CreateCharacterWithAi",
+      /* "/api/character/CreateCharacterWithAi", */
       {
         message: characterPrompt,
       }
@@ -178,7 +180,8 @@ const handleResetAllAbilityScoreButtonClicked = (
 const formSubmit = async (character: Character, navigate: NavigateFunction) => {
   try {
     await axios.post(
-      "/api/Character/AddCharacter",
+      "http://localhost:5106/api/Character/AddCharacter",
+      /* "/api/Character/AddCharacter", */
       /* "https://chasfantasy.azurewebsites.net/api/Character/AddCharacter", */
       /* `https://localhost:7110/api/Character/AddCharacter`, */
       /* `52.149.227.5:8081/api/Character/AddCharacter`, */

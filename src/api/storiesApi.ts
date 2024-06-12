@@ -1,9 +1,9 @@
 import axios from "axios";
 import type { StoryText } from "../types/types";
 
-const BASE_URL =
-  /* "https://chasfantasy.azurewebsites.net/api/ActiveStory/AddStory" */
-  "/api/ActiveStory/AddStory";
+const BASE_URL = /* "http://localhost:5106/api/ActiveStory/AddStory"; */
+  "https://chasfantasy.azurewebsites.net/api/ActiveStory/AddStory"
+  /* "/api/ActiveStory/AddStory"; */
 
 
 // CREATE

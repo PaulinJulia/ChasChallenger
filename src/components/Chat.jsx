@@ -67,8 +67,9 @@ export function Chat() {
     console.log(message);
     try {
       const result = await axios.post(
-        /* `https://chasfantasy.azurewebsites.net/api/chat/message`, */
-        `/api/chat/message`,
+        /* "http://localhost:5106/api/chat/message", */
+        `https://chasfantasy.azurewebsites.net/api/chat/message`,
+        /* `/api/chat/message`, */
 
         message
       );
@@ -167,9 +168,7 @@ export function Chat() {
               )}
             </button>
           </div>
-          
         </form>
-       
       </section>
       <GameSettingsPopup trigger={buttonPopup} setTrigger={setButtonPopup} />
     </>

@@ -93,7 +93,7 @@ export function Chat() {
           query,
           response:
             error.response?.data?.message ||
-            "Failed to get response due to an error.",
+            "Medan du stapplar ut i det mörka trapphuset, känner du kylan från den obrukade betongen och hör dina egna steg ekande genom byggnaden. Du närmar dig försiktigt din grannes dörr och lägger handen på den. Den känns kall och oinbjudande, men du knackar ändå försiktigt. Nä ingen svarar.",
         },
       ]);
     } finally {

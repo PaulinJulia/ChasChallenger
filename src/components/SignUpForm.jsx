@@ -19,8 +19,8 @@ function SignUpForm() {
     }
     try {
       const response = await axios.post(
-        "http://localhost:5106/api/register",
-        /*  `https://chasfantasy.azurewebsites.net/register`, */
+        /* "http://localhost:5106/api/register", */
+        `https://chasfantasy.azurewebsites.net/api/register`,
         /* `/api/register`, */
 
         {
@@ -40,7 +40,9 @@ function SignUpForm() {
   return (
     <div className={style.container}>
       <form className={style.form} onSubmit={handleSubmit}>
-        <h2><div className={style.title}>Bli medlem</div></h2>
+        <h2>
+          <div className={style.title}>Bli medlem</div>
+        </h2>
         <div className={style.inputs}>
           <label className={style["label-name"]} htmlFor="email">
             E-post*
@@ -69,7 +71,7 @@ function SignUpForm() {
         </div>
         <div className={style.inputs}>
           <label className={style["label-name"]} htmlFor="password">
-           Bekräfta lösenord*
+            Bekräfta lösenord*
           </label>
           <input
             className={style["input-form"]}
@@ -80,7 +82,7 @@ function SignUpForm() {
             required
           />
         </div>
-      {/*   <div className={style["agree-checkbox-wrapper"]}>
+        {/*   <div className={style["agree-checkbox-wrapper"]}>
           <input
             className={style["input-checkbox"]}
             title="Agree terms"

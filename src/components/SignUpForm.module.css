@@ -99,6 +99,7 @@
 .goback-link {
   display: flex;
   cursor: pointer;
+    margin-top: 5rem;
   
 }
 

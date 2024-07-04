@@ -7,7 +7,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 axios.defaults.withCredentials = true;
 
 const handleKeyDown = (event) => {
-  if (event.key === 'Enter') {
+  if (event.key === "Enter") {
     handleLogin(event);
   }
 };
@@ -19,22 +19,26 @@ function LoginForm() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleLogin = async (event) => {
+    console.log("hej från knappen");
     event.preventDefault();
     setErrorMessage("");
 
     try {
       const response = await axios.post(
         /* "http://localhost:5106/api/login?useCookies=true", */
-        `https://chasfantasy.azurewebsites.net/api/login?useCookies=true`,
+        /* `https://chasfantasy.azurewebsites.net/api/login?useCookies=true`, */
         /* `/api/login?useCookies=true`, */
+        "http://localhost:5001/api/login",
 
         {
           email,
           password,
+        },
+        {
+          withCredentials: true,
         }
       );
 
-   
       if (response.status === 200) {
         console.log("Login succeeded!");
       }
@@ -53,14 +57,12 @@ function LoginForm() {
     } catch (error) {
       console.error(
         "Login error:",
-        /* error.response ? error.response.data : "Server error" */
-        alert("Server error. Nån har inte gjort sitt jobb!")
+        error.response ? error.response.data : "Server error"
+        /* alert("Server error. Nån har inte gjort sitt jobb!") */
       );
       /* setErrorMessage(error.response ? error.response.data : "Server error"); */
     }
   };
-
- 
 
   return (
     <div className="container">
@@ -78,7 +80,6 @@ function LoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             /* onKeyDown={handleLogin}  */
-            
           />
         </div>
         <div className={style["inputs"]}>
@@ -105,7 +106,7 @@ function LoginForm() {
       >
         <p>Logga in</p>
       </button>
-      
+
       <div className={style["forgot-password"]}>
         <Link title="Har du bort ditt lösenord?" to={"/error"}>
           Har du tappat bort ditt lösenord?

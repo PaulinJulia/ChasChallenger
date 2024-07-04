@@ -11,6 +11,7 @@ function SignUpForm() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = async (event) => {
+    console.log("hej från knappen Bli medlem");
     event.preventDefault();
 
     if (password !== confirmPassword) {
@@ -20,8 +21,9 @@ function SignUpForm() {
     try {
       const response = await axios.post(
         /* "http://localhost:5106/api/register", */
-        `https://chasfantasy.azurewebsites.net/api/register`,
+        /* `https://chasfantasy.azurewebsites.net/api/register`, */
         /* `/api/register`, */
+        "http://localhost:5001/api/register",
 
         {
           email,
